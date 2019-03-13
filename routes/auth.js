@@ -1,5 +1,4 @@
 const controller = require('../controllers/AuthController');
-const validateToken = require('../utils').validateToken;
 
 module.exports = (router) => {
     router.route('/register')
