@@ -3,6 +3,6 @@ const validateToken = require('../utils').validateToken;
 
 module.exports = (router) => {
     router.route('/users')
-        .get(controller.getAll);
+        .get(validateToken, controller.getAll);
 
 };

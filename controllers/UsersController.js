@@ -12,10 +12,7 @@ module.exports = {
       let status = 200;
       if (!err) {
         const payload = req.decoded;
-        // TODO: Log the payload here to verify that it's the same payload
-        //  we used when we created the token
-        // console.log('PAYLOAD', payload);
-        if (payload && payload.user === 'admin') {
+        if (payload) {
           User.find({}, (err, users) => {
             if (!err) {
               result.status = status;

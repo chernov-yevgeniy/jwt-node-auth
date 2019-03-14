@@ -48,7 +48,7 @@ module.exports = {
                 status = 200;
                 // Create a token
                 const payload = { user: user.name };
-                const options = { expiresIn: 1440};
+                const options = { expiresIn: "1d"};
                 const secret = process.env.JWT_SECRET;
                 const token = jwt.sign(payload, secret, options);
 
