@@ -9,6 +9,7 @@ import ComponentsOverview from './views/ComponentsOverview.vue';
 import Tables from './views/Tables.vue';
 import BlogPosts from './views/BlogPosts.vue';
 import Login from './views/Login.vue';
+import Register from './views/Register.vue';
 
 Vue.use(Router);
 
@@ -30,6 +31,12 @@ export default new Router({
       name: 'login',
       meta: { layout: 'not-component' },
       component: Login
+    },
+    {
+      path: '/register',
+      name: 'register',
+      meta: { layout: 'not-component' },
+      component: Register
     },
     {
       path: '/blog-overview',
